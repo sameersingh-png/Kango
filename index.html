@@ -1,0 +1,2462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wear The Culture | Brand Clothes Delivered to Your Door</title>
+
+<meta name="description"
+      content="Wear The Culture - Full Sleeve T-Shirts and Boxy Fit clothing from Hariana.">
+
+<style>
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #111111;
+    --dark: #1c1c1c;
+    --white: #ffffff;
+    --light: #f6f6f6;
+    --border: #e5e5e5;
+    --gray: #777777;
+    --accent: #d97706;
+    --accent-dark: #b45309;
+    --green: #16a34a;
+    --red: #dc2626;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fafafa;
+    color: var(--black);
+    line-height: 1.5;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 72px;
+    padding: 10px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.logo h1 {
+    font-size: 20px;
+    line-height: 1.1;
+}
+
+.logo p {
+    font-size: 10px;
+    color: var(--gray);
+    margin-top: 3px;
+}
+
+.nav-cart {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: var(--black);
+    color: white;
+    font-size: 19px;
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+
+    min-width: 20px;
+    height: 20px;
+
+    padding: 0 5px;
+
+    border-radius: 50%;
+    background: var(--accent);
+
+    display: grid;
+    place-items: center;
+
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 500px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.78),
+            rgba(0,0,0,.42),
+            rgba(0,0,0,.12)
+        ),
+        url("https://i.ibb.co/YVg6SPF/photo-1573855619003-97b4799dcd8b.jpg")
+        center / cover no-repeat;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 60px 20px;
+
+    animation: heroIn .8s ease;
+}
+
+.hero-badge {
+    display: inline-block;
+
+    padding: 7px 13px;
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.12);
+
+    font-size: 12px;
+}
+
+.hero h2 {
+    max-width: 700px;
+
+    font-size: clamp(42px, 10vw, 78px);
+    line-height: .95;
+
+    letter-spacing: -3px;
+}
+
+.hero p {
+    max-width: 520px;
+
+    margin: 20px 0 28px;
+
+    color: #eeeeee;
+    font-size: 16px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 13px 21px;
+
+    background: white;
+    color: black;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: .25s;
+}
+
+.hero-button:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 45px 18px 120px;
+}
+
+.section-title {
+    margin-bottom: 22px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+
+.section-title p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   CATEGORY FILTER
+========================================================= */
+
+.categories {
+    display: flex;
+    gap: 8px;
+
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    padding: 4px 0 22px;
+}
+
+.categories::-webkit-scrollbar {
+    display: none;
+}
+
+.category-btn {
+    flex-shrink: 0;
+
+    border: 1px solid var(--border);
+    background: white;
+
+    padding: 9px 16px;
+
+    border-radius: 30px;
+
+    color: #444;
+
+    transition: .2s;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background: var(--black);
+    color: white;
+    border-color: var(--black);
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.product-card {
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    transition: .25s;
+
+    animation: cardIn .45s ease both;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
+}
+
+.product-image {
+    aspect-ratio: 1 / 1.15;
+    overflow: hidden;
+    background: #eee;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .5s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 12px;
+}
+
+.product-category {
+    color: var(--accent-dark);
+
+    font-size: 10px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+
+.product-name {
+    font-size: 15px;
+    line-height: 1.25;
+
+    margin: 5px 0;
+}
+
+.product-description {
+    color: var(--gray);
+    font-size: 12px;
+
+    min-height: 36px;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.price {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.add-btn {
+    border: none;
+
+    background: var(--black);
+    color: white;
+
+    padding: 9px 11px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: .2s;
+}
+
+.add-btn:hover {
+    background: var(--accent);
+}
+
+.add-btn.added {
+    background: var(--green);
+}
+
+
+/* =========================================================
+   FLOATING CART
+========================================================= */
+
+.floating-cart {
+    position: fixed;
+
+    right: 18px;
+    bottom: 78px;
+
+    z-index: 900;
+
+    width: 58px;
+    height: 58px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--black);
+    color: white;
+
+    font-size: 23px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.25);
+
+    transition: .25s;
+}
+
+.floating-cart:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp {
+    position: fixed;
+
+    right: 18px;
+    bottom: 15px;
+
+    z-index: 900;
+
+    padding: 11px 16px;
+
+    background: #25D366;
+    color: white;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.18);
+
+    animation: whatsappPulse 2.5s infinite;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 2000;
+
+    background: rgba(0,0,0,.65);
+
+    display: none;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.overlay.active {
+    display: flex;
+}
+
+.modal {
+    width: 100%;
+    max-width: 650px;
+
+    max-height: 94vh;
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 20px 20px 0 0;
+
+    padding: 22px;
+
+    animation: modalUp .3s ease;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    background: white;
+
+    z-index: 5;
+
+    padding-bottom: 12px;
+}
+
+.modal-header h2 {
+    font-size: 23px;
+}
+
+.close-btn {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f0f0f0;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+.cart-item {
+    display: flex;
+    gap: 12px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.cart-item-image {
+    width: 68px;
+    height: 78px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-info h3 {
+    font-size: 14px;
+}
+
+.cart-price {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 7px;
+}
+
+.quantity button {
+    width: 27px;
+    height: 27px;
+
+    border: 1px solid var(--border);
+    background: white;
+
+    border-radius: 5px;
+}
+
+.quantity span {
+    min-width: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.remove-btn {
+    margin-top: 5px;
+
+    border: none;
+    background: transparent;
+
+    color: var(--red);
+
+    font-size: 11px;
+}
+
+.item-total {
+    white-space: nowrap;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 18px 0;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.checkout-btn {
+    width: 100%;
+
+    border: none;
+
+    background: var(--accent);
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.checkout-btn:hover {
+    background: var(--accent-dark);
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 45px 10px;
+
+    color: var(--gray);
+}
+
+.empty-cart-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   CHECKOUT FORM
+========================================================= */
+
+.checkout-view {
+    display: none;
+}
+
+.checkout-view.active {
+    display: block;
+}
+
+.back-button {
+    border: none;
+    background: transparent;
+
+    color: var(--gray);
+
+    padding: 6px 0;
+    margin-bottom: 10px;
+}
+
+.form-title {
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.required {
+    color: var(--red);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 12px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.form-group textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent);
+
+    box-shadow:
+        0 0 0 3px rgba(217,119,6,.1);
+}
+
+
+/* =========================================================
+   ORDER PREVIEW
+========================================================= */
+
+.order-preview {
+    background: #f7f7f7;
+
+    border-radius: 9px;
+
+    padding: 13px;
+
+    margin: 18px 0;
+
+    font-size: 13px;
+}
+
+.preview-row {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin: 6px 0;
+}
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.success-view {
+    display: none;
+
+    text-align: center;
+
+    padding: 35px 10px;
+}
+
+.success-view.active {
+    display: block;
+}
+
+.success-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: auto auto 15px;
+
+    border-radius: 50%;
+
+    background: #dcfce7;
+
+    color: var(--green);
+
+    display: grid;
+    place-items: center;
+
+    font-size: 30px;
+}
+
+.success-view p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.success-whatsapp {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 12px 18px;
+
+    background: #25D366;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #111;
+    color: white;
+
+    text-align: center;
+
+    padding: 38px 20px;
+}
+
+footer h3 {
+    font-size: 21px;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.contact-info {
+    display: flex;
+
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 18px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes heroIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes cardIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes modalUp {
+
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes whatsappPulse {
+
+    0%,100% {
+        box-shadow: 0 5px 20px rgba(0,0,0,.18);
+    }
+
+    50% {
+        box-shadow: 0 5px 25px rgba(37,211,102,.5);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (min-width: 650px) {
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .overlay {
+        align-items: center;
+        padding: 20px;
+    }
+
+    .modal {
+        border-radius: 18px;
+    }
+
+}
+
+@media (min-width: 1000px) {
+
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<nav class="nav">
+
+    <a href="#" class="logo">
+
+        <h1>Wear The Culture</h1>
+
+        <p>
+            Brand Clothes Delivered to Your Door
+        </p>
+
+    </a>
+
+
+    <button
+        class="nav-cart"
+        onclick="openCart()"
+        aria-label="Shopping Cart">
+
+        🛒
+
+        <span
+            class="cart-count"
+            id="headerCartCount">
+            0
+        </span>
+
+    </button>
+
+</nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+    <span class="hero-badge">
+        ✦ Hariana • Punjab
+    </span>
+
+    <h2>
+        Wear The Culture.
+    </h2>
+
+    <p>
+        Discover stylish full-sleeve T-shirts and modern
+        boxy-fit clothing made for everyday confidence.
+    </p>
+
+    <a
+        href="#products"
+        class="hero-button">
+
+        Shop Collection →
+
+    </a>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
+
+<main id="products">
+
+<div class="section-title">
+
+    <h2>
+        Our Collection
+    </h2>
+
+    <p>
+        Choose your favourite style and order directly from us.
+    </p>
+
+</div>
+
+
+<div
+    class="categories"
+    id="categories">
+</div>
+
+
+<div
+    class="product-grid"
+    id="productGrid">
+</div>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<h3>
+    Wear The Culture
+</h3>
+
+<p>
+    Brand Clothes Delivered to Your Door
+</p>
+
+<div class="contact-info">
+
+    <span>
+        📍 Hariana
+    </span>
+
+    <span>
+        📞 985544****
+    </span>
+
+    <span>
+        ✉️ cs952261@gmail.com
+    </span>
+
+</div>
+
+<p style="margin-top:20px;">
+    © <span id="year"></span> Wear The Culture
+</p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     FLOATING CART
+===================================================== -->
+
+<button
+    class="floating-cart"
+    onclick="openCart()"
+    aria-label="Open Cart">
+
+    🛒
+
+    <span
+        class="cart-count"
+        id="floatingCartCount">
+        0
+    </span>
+
+</button>
+
+
+
+<!-- =====================================================
+     WHATSAPP
+
+     IMPORTANT:
+     Replace 91985544XXXX with the complete number.
+===================================================== -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/91985544XXXX"
+    target="_blank"
+    rel="noopener">
+
+    💬 Chat on WhatsApp
+
+</a>
+
+
+
+<!-- =====================================================
+     CART / CHECKOUT MODAL
+===================================================== -->
+
+<div
+    class="overlay"
+    id="cartOverlay">
+
+
+<div class="modal">
+
+
+<!-- =====================================================
+     MODAL HEADER
+===================================================== -->
+
+<div class="modal-header">
+
+    <h2>
+        Your Cart
+    </h2>
+
+    <button
+        class="close-btn"
+        onclick="closeCart()">
+
+        ×
+
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     CART VIEW
+===================================================== -->
+
+<div id="cartView">
+
+    <div id="cartItems"></div>
+
+    <div id="cartBottom"></div>
+
+</div>
+
+
+
+<!-- =====================================================
+     CHECKOUT VIEW
+===================================================== -->
+
+<div
+    class="checkout-view"
+    id="checkoutView">
+
+
+<button
+    class="back-button"
+    onclick="showCart()">
+
+    ← Back to Cart
+
+</button>
+
+
+<h2 class="form-title">
+    Delivery Details
+</h2>
+
+
+
+<!-- =====================================================
+     CUSTOMER ORDER FORM
+
+     FORM ID MUST BE REPLACED WITH YOUR FORMSPREE ID
+===================================================== -->
+
+<form
+    id="orderForm"
+    action="https://formspree.io/f/YOUR_FORM_ID"
+    method="POST">
+
+
+<!-- CUSTOMER NAME -->
+
+<div class="form-group">
+
+    <label for="customerName">
+
+        Customer Name
+        <span class="required">*</span>
+
+    </label>
+
+    <input
+        type="text"
+        id="customerName"
+        name="customer_name"
+        placeholder="Enter your full name"
+        required>
+
+</div>
+
+
+
+<!-- PHONE -->
+
+<div class="form-group">
+
+    <label for="customerPhone">
+
+        Phone Number
+        <span class="required">*</span>
+
+    </label>
+
+    <input
+        type="tel"
+        id="customerPhone"
+        name="customer_phone"
+        placeholder="Enter your phone number"
+        inputmode="tel"
+        required>
+
+</div>
+
+
+
+<!-- ADDRESS -->
+
+<div class="form-group">
+
+    <label for="deliveryAddress">
+
+        Delivery Address
+        <span class="required">*</span>
+
+    </label>
+
+    <textarea
+        id="deliveryAddress"
+        name="delivery_address"
+        placeholder="House number, street, village/city, PIN code"
+        required></textarea>
+
+</div>
+
+
+
+<!-- INSTRUCTIONS -->
+
+<div class="form-group">
+
+    <label for="instructions">
+
+        Special Instructions
+
+    </label>
+
+    <textarea
+        id="instructions"
+        name="special_instructions"
+        placeholder="Any special delivery instructions?"></textarea>
+
+</div>
+
+
+
+<!-- =====================================================
+     HIDDEN ORDER DATA
+
+     JavaScript fills these automatically.
+===================================================== -->
+
+<input
+    type="hidden"
+    name="order_summary"
+    id="orderSummary">
+
+<input
+    type="hidden"
+    name="grand_total"
+    id="grandTotal">
+
+<input
+    type="hidden"
+    name="shop_name"
+    value="Wear The Culture">
+
+<input
+    type="hidden"
+    name="_subject"
+    value="New Order - Wear The Culture">
+
+
+
+<!-- ORDER PREVIEW -->
+
+<div
+    class="order-preview"
+    id="orderPreview">
+</div>
+
+
+
+<!-- SUBMIT -->
+
+<button
+    type="submit"
+    class="checkout-btn"
+    id="submitButton">
+
+    Place Order
+
+</button>
+
+
+</form>
+
+</div>
+
+
+
+<!-- =====================================================
+     SUCCESS VIEW
+===================================================== -->
+
+<div
+    class="success-view"
+    id="successView">
+
+
+<div class="success-icon">
+    ✓
+</div>
+
+
+<h2>
+    Order Placed!
+</h2>
+
+
+<p>
+    Wear The Culture will contact you on WhatsApp
+    to confirm your order, availability and delivery.
+</p>
+
+
+<a
+    href="https://wa.me/91985544XXXX"
+    target="_blank"
+    rel="noopener"
+    class="success-whatsapp">
+
+    💬 Message Us on WhatsApp
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   PRODUCT DATA
+========================================================= */
+
+const products = [
+
+    {
+        id: 1,
+        name: "Classic Black Full Sleeve",
+        price: 799,
+        category: "Full Sleeve T-Shirts",
+        image: "https://i.ibb.co/jPwQ2hSR/IMG-20261005-WA0003.jpg",
+        description: "Classic full-sleeve style for everyday wear."
+    },
+
+    {
+        id: 2,
+        name: "Urban White Full Sleeve",
+        price: 749,
+        category: "Full Sleeve T-Shirts",
+        image: "https://i.ibb.co/BVNJcJdB/IMG-20261005-WA0004.jpg",
+        description: "Clean white design with a comfortable fit."
+    },
+
+    {
+        id: 3,
+        name: "Street Grey Full Sleeve",
+        price: 799,
+        category: "Full Sleeve T-Shirts",
+        image: "https://i.ibb.co/0pGvcHKy/IMG-20261005-WA0001.jpg",
+        description: "Modern grey look for casual outfits."
+    },
+
+    {
+        id: 4,
+        name: "Essential Navy Full Sleeve",
+        price: 849,
+        category: "Full Sleeve T-Shirts",
+        image: "https://i.ibb.co/d0xs1CSR/IMG-20261005-WA0002.jpg",
+        description: "Classic navy colour with a premium look."
+    },
+
+    {
+        id: 5,
+        name: "Culture Oversized Black",
+        price: 899,
+        category: "Boxy Fit",
+        image: "https://i.ibb.co/jPwQ2hSR/IMG-20261005-WA0003.jpg",
+        description: "Relaxed boxy silhouette with a streetwear feel."
+    },
+
+    {
+        id: 6,
+        name: "Premium Boxy White",
+        price: 949,
+        category: "Boxy Fit",
+        image: "https://i.ibb.co/BVNJcJdB/IMG-20261005-WA0004.jpg",
+        description: "Minimal boxy fit designed for modern styling."
+    },
+
+    {
+        id: 7,
+        name: "Street Boxy Grey",
+        price: 899,
+        category: "Boxy Fit",
+        image: "https://i.ibb.co/0pGvcHKy/IMG-20261005-WA0001.jpg",
+        description: "Relaxed grey boxy fit for everyday streetwear."
+    },
+
+    {
+        id: 8,
+        name: "Culture Boxy Olive",
+        price: 999,
+        category: "Boxy Fit",
+        image: "https://i.ibb.co/d0xs1CSR/IMG-20261005-WA0002.jpg",
+        description: "Fresh olive shade with a relaxed silhouette."
+    },
+
+    {
+        id: 9,
+        name: "Midnight Full Sleeve",
+        price: 849,
+        category: "Full Sleeve T-Shirts",
+        image: "https://i.ibb.co/jPwQ2hSR/IMG-20261005-WA0003.jpg",
+        description: "Deep black colour with a premium appearance."
+    },
+
+    {
+        id: 10,
+        name: "Culture Boxy Sand",
+        price: 949,
+        category: "Boxy Fit",
+        image: "https://i.ibb.co/BVNJcJdB/IMG-20261005-WA0004.jpg",
+        description: "Modern relaxed boxy fit for casual outfits."
+    }
+
+];
+
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+let cart =
+    JSON.parse(
+        localStorage.getItem("wearTheCultureCart")
+    ) || [];
+
+
+
+/* =========================================================
+   INITIALIZATION
+========================================================= */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+renderCategories();
+
+renderProducts("All");
+
+updateCart();
+
+
+
+/* =========================================================
+   CATEGORY BUTTONS
+========================================================= */
+
+function renderCategories() {
+
+    const categories = [
+        "All",
+        ...new Set(
+            products.map(product => product.category)
+        )
+    ];
+
+
+    document.getElementById("categories").innerHTML =
+        categories.map((category, index) => `
+
+            <button
+                class="category-btn ${index === 0 ? "active" : ""}"
+                onclick="filterProducts('${category}')">
+
+                ${category}
+
+            </button>
+
+        `).join("");
+
+}
+
+
+
+function filterProducts(category) {
+
+    document.querySelectorAll(".category-btn")
+        .forEach(button => {
+
+            button.classList.toggle(
+                "active",
+                button.textContent.trim() === category
+            );
+
+        });
+
+
+    renderProducts(category);
+
+}
+
+
+
+/* =========================================================
+   RENDER PRODUCTS
+========================================================= */
+
+function renderProducts(category) {
+
+    const filtered =
+        category === "All"
+            ? products
+            : products.filter(
+                product => product.category === category
+            );
+
+
+    document.getElementById("productGrid").innerHTML =
+
+        filtered.map((product, index) => `
+
+            <article
+                class="product-card"
+                style="animation-delay:${index * .04}s">
+
+
+                <div class="product-image">
+
+                    <img
+                        src="${product.image}"
+                        alt="${product.name} - Wear The Culture"
+                        loading="lazy">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        ${product.category}
+                    </div>
+
+
+                    <h3 class="product-name">
+                        ${product.name}
+                    </h3>
+
+
+                    <p class="product-description">
+                        ${product.description}
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₹${product.price.toLocaleString("en-IN")}
+                        </span>
+
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart(${product.id}, this)">
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        `).join("");
+
+}
+
+
+
+/* =========================================================
+   ADD TO CART
+========================================================= */
+
+function addToCart(productId, button) {
+
+    const existing =
+        cart.find(item => item.id === productId);
+
+
+    if (existing) {
+
+        existing.quantity++;
+
+    } else {
+
+        cart.push({
+            id: productId,
+            quantity: 1
+        });
+
+    }
+
+
+    saveCart();
+
+    updateCart();
+
+
+    button.textContent = "✓ Added";
+
+    button.classList.add("added");
+
+
+    setTimeout(() => {
+
+        button.textContent = "Add to Cart";
+
+        button.classList.remove("added");
+
+    }, 900);
+
+}
+
+
+
+/* =========================================================
+   SAVE CART
+========================================================= */
+
+function saveCart() {
+
+    localStorage.setItem(
+        "wearTheCultureCart",
+        JSON.stringify(cart)
+    );
+
+}
+
+
+
+/* =========================================================
+   CART COUNT
+========================================================= */
+
+function getCartCount() {
+
+    return cart.reduce(
+        (total, item) =>
+            total + item.quantity,
+        0
+    );
+
+}
+
+
+
+/* =========================================================
+   CART TOTAL
+========================================================= */
+
+function getCartTotal() {
+
+    return cart.reduce((total, item) => {
+
+        const product =
+            products.find(
+                p => p.id === item.id
+            );
+
+
+        return total +
+            (
+                product
+                    ? product.price * item.quantity
+                    : 0
+            );
+
+    }, 0);
+
+}
+
+
+
+/* =========================================================
+   UPDATE CART
+========================================================= */
+
+function updateCart() {
+
+    const count =
+        getCartCount();
+
+
+    document.getElementById(
+        "headerCartCount"
+    ).textContent = count;
+
+
+    document.getElementById(
+        "floatingCartCount"
+    ).textContent = count;
+
+
+    renderCart();
+
+}
+
+
+
+/* =========================================================
+   RENDER CART
+========================================================= */
+
+function renderCart() {
+
+    const container =
+        document.getElementById("cartItems");
+
+    const bottom =
+        document.getElementById("cartBottom");
+
+
+    if (cart.length === 0) {
+
+        container.innerHTML = `
+
+            <div class="empty-cart">
+
+                <div class="empty-cart-icon">
+                    🛒
+                </div>
+
+                <h3>
+                    Your cart is empty
+                </h3>
+
+                <p>
+                    Add something you love from our collection.
+                </p>
+
+            </div>
+
+        `;
+
+        bottom.innerHTML = "";
+
+        return;
+    }
+
+
+
+    container.innerHTML =
+
+        cart.map(item => {
+
+            const product =
+                products.find(
+                    p => p.id === item.id
+                );
+
+
+            if (!product) return "";
+
+
+            const subtotal =
+                product.price *
+                item.quantity;
+
+
+            return `
+
+                <div class="cart-item">
+
+
+                    <div class="cart-item-image">
+
+                        <img
+                            src="${product.image}"
+                            alt="${product.name}"
+                            loading="lazy">
+
+                    </div>
+
+
+                    <div class="cart-item-info">
+
+                        <h3>
+                            ${product.name}
+                        </h3>
+
+
+                        <div class="cart-price">
+                            ₹${product.price.toLocaleString("en-IN")}
+                            each
+                        </div>
+
+
+                        <div class="quantity">
+
+                            <button
+                                onclick="changeQuantity(${product.id}, -1)">
+                                −
+                            </button>
+
+
+                            <span>
+                                ${item.quantity}
+                            </span>
+
+
+                            <button
+                                onclick="changeQuantity(${product.id}, 1)">
+                                +
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            class="remove-btn"
+                            onclick="removeItem(${product.id})">
+
+                            Remove
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="item-total">
+
+                        ₹${subtotal.toLocaleString("en-IN")}
+
+                    </div>
+
+                </div>
+
+            `;
+
+        }).join("");
+
+
+
+    bottom.innerHTML = `
+
+        <div class="cart-total">
+
+            <span>
+                Grand Total
+            </span>
+
+            <span>
+                ₹${getCartTotal().toLocaleString("en-IN")}
+            </span>
+
+        </div>
+
+
+        <button
+            class="checkout-btn"
+            onclick="openCheckout()">
+
+            Place Order →
+
+        </button>
+
+    `;
+
+}
+
+
+
+/* =========================================================
+   CHANGE QUANTITY
+========================================================= */
+
+function changeQuantity(id, amount) {
+
+    const item =
+        cart.find(
+            product => product.id === id
+        );
+
+
+    if (!item) return;
+
+
+    item.quantity += amount;
+
+
+    if (item.quantity <= 0) {
+
+        cart =
+            cart.filter(
+                product => product.id !== id
+            );
+
+    }
+
+
+    saveCart();
+
+    updateCart();
+
+}
+
+
+
+/* =========================================================
+   REMOVE ITEM
+========================================================= */
+
+function removeItem(id) {
+
+    cart =
+        cart.filter(
+            product => product.id !== id
+        );
+
+
+    saveCart();
+
+    updateCart();
+
+}
+
+
+
+/* =========================================================
+   OPEN CART
+========================================================= */
+
+function openCart() {
+
+    document
+        .getElementById("cartOverlay")
+        .classList.add("active");
+
+
+    showCart();
+
+}
+
+
+
+/* =========================================================
+   CLOSE CART
+========================================================= */
+
+function closeCart() {
+
+    document
+        .getElementById("cartOverlay")
+        .classList.remove("active");
+
+}
+
+
+
+/* =========================================================
+   SHOW CART
+========================================================= */
+
+function showCart() {
+
+    document.getElementById(
+        "cartView"
+    ).style.display = "block";
+
+
+    document.getElementById(
+        "checkoutView"
+    ).classList.remove("active");
+
+
+    document.getElementById(
+        "successView"
+    ).classList.remove("active");
+
+
+    document.querySelector(
+        ".modal-header h2"
+    ).textContent = "Your Cart";
+
+
+    updateCart();
+
+}
+
+
+
+/* =========================================================
+   OPEN CHECKOUT
+========================================================= */
+
+function openCheckout() {
+
+    if (cart.length === 0) {
+
+        alert("Your cart is empty.");
+
+        return;
+    }
+
+
+    document.getElementById(
+        "cartView"
+    ).style.display = "none";
+
+
+    document.getElementById(
+        "checkoutView"
+    ).classList.add("active");
+
+
+    document.querySelector(
+        ".modal-header h2"
+    ).textContent = "Place Your Order";
+
+
+    generatePreview();
+
+}
+
+
+
+/* =========================================================
+   GENERATE ORDER PREVIEW
+========================================================= */
+
+function generatePreview() {
+
+    let html = `
+        <strong>Order Summary</strong>
+
+        <hr style="
+            border:none;
+            border-top:1px solid #ddd;
+            margin:8px 0;
+        ">
+    `;
+
+
+    cart.forEach(item => {
+
+        const product =
+            products.find(
+                p => p.id === item.id
+            );
+
+
+        if (!product) return;
+
+
+        const subtotal =
+            product.price *
+            item.quantity;
+
+
+        html += `
+
+            <div class="preview-row">
+
+                <span>
+                    ${product.name}
+                    × ${item.quantity}
+                </span>
+
+                <strong>
+                    ₹${subtotal.toLocaleString("en-IN")}
+                </strong>
+
+            </div>
+
+        `;
+
+    });
+
+
+    html += `
+
+        <hr style="
+            border:none;
+            border-top:1px solid #ddd;
+            margin:8px 0;
+        ">
+
+
+        <div class="preview-row">
+
+            <strong>
+                Grand Total
+            </strong>
+
+            <strong>
+                ₹${getCartTotal().toLocaleString("en-IN")}
+            </strong>
+
+        </div>
+
+    `;
+
+
+    document.getElementById(
+        "orderPreview"
+    ).innerHTML = html;
+
+}
+
+
+
+/* =========================================================
+   CREATE COMPLETE EMAIL ORDER
+========================================================= */
+
+function createOrderSummary() {
+
+    let summary =
+`WEAR THE CULTURE
+NEW CUSTOMER ORDER
+
+================================
+ORDER ITEMS
+================================
+
+`;
+
+
+    cart.forEach((item, index) => {
+
+        const product =
+            products.find(
+                p => p.id === item.id
+            );
+
+
+        if (!product) return;
+
+
+        const subtotal =
+            product.price *
+            item.quantity;
+
+
+        summary +=
+`${index + 1}. ${product.name}
+Category: ${product.category}
+Price: ₹${product.price}
+Quantity: ${item.quantity}
+Subtotal: ₹${subtotal}
+
+`;
+
+    });
+
+
+    summary +=
+`================================
+GRAND TOTAL: ₹${getCartTotal()}
+================================
+
+CUSTOMER DETAILS
+================================
+
+Customer Name:
+${document.getElementById("customerName").value}
+
+Phone Number:
+${document.getElementById("customerPhone").value}
+
+Delivery Address:
+${document.getElementById("deliveryAddress").value}
+
+Special Instructions:
+${document.getElementById("instructions").value || "None"}
+
+================================
+
+Please contact the customer on WhatsApp
+to confirm availability, pricing and delivery.
+`;
+
+
+    return summary;
+
+}
+
+
+
+/* =========================================================
+   FORM SUBMISSION
+========================================================= */
+
+document
+.getElementById("orderForm")
+.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+
+    if (cart.length === 0) {
+
+        alert("Your cart is empty.");
+
+        showCart();
+
+        return;
+
+    }
+
+
+    const form = this;
+
+    const button =
+        document.getElementById(
+            "submitButton"
+        );
+
+
+    /*
+       CREATE COMPLETE ORDER SUMMARY
+    */
+
+    const summary =
+        createOrderSummary();
+
+
+    /*
+       PUT ORDER INTO HIDDEN FORM FIELDS
+    */
+
+    document.getElementById(
+        "orderSummary"
+    ).value = summary;
+
+
+    document.getElementById(
+        "grandTotal"
+    ).value =
+        "₹" + getCartTotal();
+
+
+    /*
+       DISABLE BUTTON
+    */
+
+    button.disabled = true;
+
+    button.textContent =
+        "Sending Order...";
+
+
+    try {
+
+        /*
+           SEND FORM TO FORMSPREE
+        */
+
+        const response =
+            await fetch(
+                form.action,
+                {
+                    method: "POST",
+
+                    body:
+                        new FormData(form),
+
+                    headers: {
+                        "Accept":
+                            "application/json"
+                    }
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Form submission failed"
+            );
+
+        }
+
+
+        /*
+           SUCCESS
+        */
+
+        cart = [];
+
+        saveCart();
+
+        updateCart();
+
+
+        form.reset();
+
+
+        document.getElementById(
+            "checkoutView"
+        ).classList.remove("active");
+
+
+        document.getElementById(
+            "successView"
+        ).classList.add("active");
+
+
+        document.querySelector(
+            ".modal-header h2"
+        ).textContent =
+            "Order Confirmed";
+
+
+        button.disabled = false;
+
+        button.textContent =
+            "Place Order";
+
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+
+        alert(
+            "Your order could not be sent. " +
+            "Please check your internet connection " +
+            "or contact us directly on WhatsApp."
+        );
+
+
+        button.disabled = false;
+
+        button.textContent =
+            "Place Order";
+
+    }
+
+});
+
+
+
+/* =========================================================
+   CLICK OUTSIDE MODAL
+========================================================= */
+
+document
+.getElementById("cartOverlay")
+.addEventListener("click", function(event) {
+
+    if (event.target === this) {
+
+        closeCart();
+
+    }
+
+});
+
+
+
+/* =========================================================
+   ESCAPE KEY
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+
+            closeCart();
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
